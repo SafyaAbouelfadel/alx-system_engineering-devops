@@ -1,2 +1,2 @@
 #!/bin/bash
-tail -n 1 iacta
+cat /tmp/h/iacta | tail -n 1 /tmp/h/iacta
