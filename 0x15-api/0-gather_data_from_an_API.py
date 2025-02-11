@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Display todo-list information of given employee."""
 from requests import get
