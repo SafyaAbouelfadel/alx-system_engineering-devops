@@ -6,5 +6,5 @@ service { 'apache2':
 
 exec { 'Fixing 500 error':
   command  => '/bin/sed -i "s/phpp/php/g" /var/www/html/wp-settings.php',
-  provider => Service['apache2'],
+  notify => Service['apache2'],
 }
