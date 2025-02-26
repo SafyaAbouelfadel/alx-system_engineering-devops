@@ -4,7 +4,7 @@ service { 'apache2':
   enable => true,
 }
 
-exec { 'Fixing 500 error':
-  command  => '/bin/sed -i "s/phpp/php/g" /var/www/html/wp-settings.php',
-  notify => Service['apache2'],
+exec { 'modify_file':
+  command => '/bin/sed -i "s/phpp/php/g" /var/www/html/wp-settings.php',
+  notify  => Service['apache2']
 }
