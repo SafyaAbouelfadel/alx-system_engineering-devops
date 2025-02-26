@@ -5,6 +5,6 @@ service { 'apache2':
 }
 
 exec { 'Fixing 500 error':
-  command  => 'sudo sed -i "s/phpp/php/g" /var/www/html/wp-settings.php',
-  provider => shell,
+  command  => '/bin/sed -i "s/phpp/php/g" /var/www/html/wp-settings.php',
+  provider => Service['apache2'],
 }
