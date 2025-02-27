@@ -13,7 +13,7 @@ exec { 'set_permissions':
 }
 
 exec { 'restart_apache':
-  command => '/usr/sbin/service apache2 restart',
-  path    => ['/usr/sbin', '/bin', '/usr/bin'],
+  command   => '/usr/sbin/service apache2 restart',
+  path      => ['/usr/sbin', '/bin', '/usr/bin'],
   subscribe => Exec['install_php_module'],
 }
